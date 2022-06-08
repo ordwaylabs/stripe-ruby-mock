@@ -178,7 +178,7 @@ module StripeMock
           currency: payment_intent[:currency],
           payment_method: payment_intent[:payment_method]
         )
-        charges[mock_charge.id] = mock_charge
+        charges[mock_charge[:id]] = mock_charge
         payment_intent[:charges][:data] << mock_charge
         payment_intent
       end
